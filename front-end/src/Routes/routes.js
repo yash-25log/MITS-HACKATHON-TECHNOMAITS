@@ -10,6 +10,7 @@ import Events from "../Components/Others/Events";
 import VideoApp from "../Components/Others/Video/VideoApp";
 import { ContextProvider } from "../Components/Others/Video/Context";
 import AllColleges from "../pages/Directorate/AllColleges";
+import LayoutDirec from "../pages/Directorate/Layout";
 
 const routes = [
   {
@@ -33,7 +34,7 @@ const routes = [
   },
   {
     path: "college",
-    element: <LayoutClg />,
+    element: <LayoutDirec />,
     children: [
       { path: "", element: <Dashboard name="MITS" /> },
 
@@ -53,6 +54,30 @@ const routes = [
       },
     ],
   },
+
+  {
+    path: "directorate",
+    element: <LayoutClg />,
+    children: [
+      // { path: "", element: <Dashboard name="MITS" /> },
+
+      { path: "dashboard", element: <Dashboard name="MITS" /> },
+      { path: "chat", element: <ChatBox /> },
+      { path: "AlumniList", element: <AllAlumniPage /> },
+      { path: "events", element: <Events role={"college"} /> },
+      { path: "allColleges", element: <AllColleges /> },
+
+      {
+        path: "videoCall",
+        element: (
+          <ContextProvider>
+            <VideoApp />
+          </ContextProvider>
+        ),
+      },
+    ],
+  },
+
   {
     path: "/",
     element: <Interface />,
