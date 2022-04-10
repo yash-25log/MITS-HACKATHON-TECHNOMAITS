@@ -9,12 +9,14 @@ import { Location, useLocation } from "react-router-dom";
 // import './index.css';
 
 export default function AllAlumniPage() {
-  const Location = useLocation();
-  console.log("college Data => ", Location.state.recordData);
-  const [collegeData, setCollegeData] = useState(Location.state.recordData);
+  //   const Location = useLocation();
+  //   console.log(Location.state.record);
+  //   const [CollegeData, setCollegeData] = useState(Location.state.record);
   const navigate = useNavigate();
 
   const [data, setData] = useState([]);
+
+  const id = 8747;
 
   // let year = new Date().getFullYear();
   // let year;
@@ -26,9 +28,7 @@ export default function AllAlumniPage() {
   // y ? year = y : year = new Date().getFullYear() ;
 
   useLayoutEffect(() => {
-    fetch(
-      `http://localhost:3045/api/SearchAlumniYear_CollegeWise/${collegeData.CollegeId}/${y}`
-    )
+    fetch(`http://localhost:3045/api/SearchAlumniYear_CollegeWise/${id}/${y}`)
       .then((resp) => resp.json())
       .then((resp) => {
         // console.log("get all users for Admin => ",resp)
@@ -45,7 +45,7 @@ export default function AllAlumniPage() {
     let year = document.getElementById("yearFilter").value;
 
     fetch(
-      `http://localhost:3045/api/SearchAlumniYear_CollegeWise/${collegeData.CollegeId}/${year}`
+      `http://localhost:3045/api/SearchAlumniYear_CollegeWise/${id}/${year}`
     )
       .then((resp) => resp.json())
       .then((resp) => {

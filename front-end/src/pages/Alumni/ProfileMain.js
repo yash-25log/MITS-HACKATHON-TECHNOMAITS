@@ -5,10 +5,9 @@ import Button from "@mui/material/Button";
 import { Location, useLocation } from "react-router-dom";
 
 export default function Profile() {
-  const Location = useLocation();
-  console.log(Location.state.record);
-  const [data, setData] = useState(Location.state.record);
-  console.log("alumniData => ", data);
+  //   const Location = useLocation();
+  //   console.log(Location.state.record);
+  //   const [data, setData] = useState(Location.state.record);
 
   function stringToColor(string) {
     let hash = 0;
@@ -39,7 +38,7 @@ export default function Profile() {
     };
   }
   return (
-    <div style={{ display: "flex", marginLeft: "350px", marginTop: "200px" }}>
+    <div style={{ display: "flex" }}>
       <div
         style={{
           width: "300px",
@@ -74,7 +73,7 @@ export default function Profile() {
           >
             Name
           </span>{" "}
-          : {data.Name}
+          : Sahil {""}
         </p>
 
         <p style={{ fontSize: "20px", fontWeight: "550", marginLeft: "40px" }}>
@@ -87,10 +86,10 @@ export default function Profile() {
           >
             Email
           </span>{" "}
-          : {data.EmailId}
+          : rohera@gmail.com{" "}
         </p>
 
-        {/* <p style={{ fontSize: "20px", fontWeight: "550", marginLeft: "40px" }}>
+        <p style={{ fontSize: "20px", fontWeight: "550", marginLeft: "40px" }}>
           <span
             style={{
               color: "rgb(42 45 62)",
@@ -100,8 +99,8 @@ export default function Profile() {
           >
             College Name
           </span>{" "}
-          : 
-        </p> */}
+          : MAIT{" "}
+        </p>
 
         <p style={{ fontSize: "20px", fontWeight: "550", marginLeft: "40px" }}>
           <span
@@ -113,7 +112,7 @@ export default function Profile() {
           >
             Enrollment No.{" "}
           </span>{" "}
-          : {data.EnrollmentNo}
+          : 12345{" "}
         </p>
 
         <p style={{ fontSize: "20px", fontWeight: "550", marginLeft: "40px" }}>
@@ -126,7 +125,7 @@ export default function Profile() {
           >
             Year Of Passing
           </span>{" "}
-          : {data.YearOfPassing}
+          : 2022{" "}
         </p>
       </div>
 

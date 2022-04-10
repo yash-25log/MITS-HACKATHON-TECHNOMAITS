@@ -1,12 +1,16 @@
 import React, { useLayoutEffect, useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import MaterialTable from "material-table";
+import { useNavigate } from "react-router-dom";
+
 import { Table, Tag, Space } from "antd";
 import "antd/dist/antd.css";
-import AddCollege from '../../Components/Others/AddCollege'
+import AddCollege from "../../Components/Others/AddCollege";
 // import './index.css';
 
 export default function AllColleges() {
+  const navigate = useNavigate();
+
   const [data, setData] = useState([]);
 
   //   const id = 8747;
@@ -52,15 +56,13 @@ export default function AllColleges() {
   //   };
 
   return (
-
     <div>
+      {/* <button style={{marginLeft : '400px' , marginTop : '50px'}} variant="contained">Add College</button> */}
 
-   {/* <button style={{marginLeft : '400px' , marginTop : '50px'}} variant="contained">Add College</button> */}
+      <AddCollege />
 
-   <AddCollege/>
-
-    <div style={{ marginLeft: "400px", marginTop: "50px" }}>
-      {/* <form onSubmit={Search}>
+      <div style={{ marginLeft: "400px", marginTop: "50px" }}>
+        {/* <form onSubmit={Search}>
         <div style={{ display: "flex" }}>
           <input
             type="integer"
@@ -78,21 +80,32 @@ export default function AllColleges() {
         </div>
       </form> */}
 
-      <Table
-        style={{
-          width: "1000px",
-          boxShadow: "0 10px 10px 10px lightgrey",
-          borderRadius: "10px",
-        }}
-        columns={columns}
-        dataSource={data}
-        pagination={{
-          defaultPageSize: 10,
-          showSizeChanger: true,
-          pageSizeOptions: ["5", "10", "20"],
-        }}
-      />
-    </div>
+        <Table
+          onRow={(recordData) => {
+            return {
+              onClick: (e) => {
+                let lastCellIndex = document.querySelector(
+                  "table tr:last-child td:last-child"
+                ).cellIndex;
+                console.log("in ant table", recordData, lastCellIndex);
+                navigate("/college/AlumniList", { state: { recordData } });
+              },
+            };
+          }}
+          style={{
+            width: "1000px",
+            boxShadow: "0 10px 10px 10px lightgrey",
+            borderRadius: "10px",
+          }}
+          columns={columns}
+          dataSource={data}
+          pagination={{
+            defaultPageSize: 10,
+            showSizeChanger: true,
+            pageSizeOptions: ["5", "10", "20"],
+          }}
+        />
+      </div>
     </div>
   );
 }

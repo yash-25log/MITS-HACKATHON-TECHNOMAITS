@@ -3,7 +3,9 @@ import Dashboard from "../Components/Others/Dashboard";
 import Layout from "../pages/Alumni/Layout";
 import LayoutClg from "../pages/College/Layout";
 import PageNotFound from "../pages/Alumni/PageNotFound";
+import AllAlumniPageMain from "../pages/College/AllAlumniPageMain";
 import AllAlumniPage from "../pages/College/AllAlumniPage";
+
 import LoginRegister from "../Components/Others/LoginRegister";
 import Interface from "../pages/Interface";
 import Events from "../Components/Others/Events";
@@ -11,6 +13,7 @@ import VideoApp from "../Components/Others/Video/VideoApp";
 import { ContextProvider } from "../Components/Others/Video/Context";
 import AllColleges from "../pages/Directorate/AllColleges";
 import LayoutDirec from "../pages/Directorate/Layout";
+import Profile from "../pages/Alumni/Profile";
 
 const routes = [
   {
@@ -37,12 +40,15 @@ const routes = [
     element: <LayoutDirec />,
     children: [
       { path: "", element: <Dashboard name="MITS" /> },
+      { path: "profile", element: <Profile /> },
 
       { path: "dashboard", element: <Dashboard name="MITS" /> },
       { path: "chat", element: <ChatBox /> },
+      { path: "AlumniListMain", element: <AllAlumniPageMain /> },
       { path: "AlumniList", element: <AllAlumniPage /> },
+
       { path: "events", element: <Events role={"college"} /> },
-      { path: "allColleges", element: <AllColleges /> },
+      // { path: "allColleges", element: <AllColleges /> },
 
       {
         path: "videoCall",

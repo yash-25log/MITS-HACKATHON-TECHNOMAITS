@@ -49,7 +49,7 @@ export default function SidebarMain() {
             Dashboard
           </Link>
           <Link
-            to="AlumniList"
+            to="AlumniListMain"
             style={{ color: "#FF4B2E" }}
             className="flex items-center flex-shrink-0 px-5 py-3 rounded-full hover:bg-gray-100 hover:bg-opacity-50"
           >
@@ -67,9 +67,9 @@ export default function SidebarMain() {
                 d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
               />
             </svg>
-            College List
+            Alumni List
           </Link>
-          {/* <Link
+          <Link
             to="events"
             style={{ color: "#FF4B2E" }}
             className="flex items-center flex-shrink-0 px-5 py-3 rounded-full hover:bg-gray-100 hover:bg-opacity-50"
@@ -89,7 +89,7 @@ export default function SidebarMain() {
               />
             </svg>
             Create Events
-          </Link> */}
+          </Link>
           <Link
             to="chat"
             style={{ color: "#FF4B2E" }}
@@ -132,7 +132,7 @@ export default function SidebarMain() {
             </svg>
             Video Call
           </Link>
-          {/* <a
+          <a
             href="#"
             style={{ color: "#FF4B2E" }}
             className="flex items-center flex-shrink-0 px-5 py-3 rounded-full hover:bg-gray-100 hover:bg-opacity-50"
@@ -152,7 +152,7 @@ export default function SidebarMain() {
               />
             </svg>
             Upload Notices
-          </a> */}
+          </a>
           <a
             href="#"
             style={{ color: "#FF4B2E" }}
