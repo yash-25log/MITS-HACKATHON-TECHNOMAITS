@@ -20,6 +20,7 @@ router.get(
   "/SearchAlumniYear_CollegeWise/:CollegeId/:year",
   search.SearchAlumniYear_CollegeWise
 );
+router.get("/getUserByToken", Middleware);
 router.get("/GetAllColleges", search.GetAllColleges);
 router.post("/login", login.Login);
 router.get("/GetEvents/:ClgId", event.GetEvents);

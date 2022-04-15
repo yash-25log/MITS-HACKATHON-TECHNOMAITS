@@ -44,7 +44,7 @@ async function Login(req, res, next) {
       });
 
       const token = jwt.sign(
-        { EnrollmentNO: User.EnrollmentNO, Role: role },
+        { EnrollmentNo: User.EnrollmentNo, Role: role },
         process.env.SECRET_KEY,
         { expiresIn: "365d" }
       );
