@@ -8,7 +8,7 @@ export default function SidebarMain() {
       style={{
         width: "20%",
         position: "fixed",
-        backgroundColor: "#2A2D3E",
+        backgroundColor: "#1A2632",
         borderRadius: "20px",
         margin: "5px",
         height: "98%",
@@ -16,13 +16,14 @@ export default function SidebarMain() {
     >
       <aside
         className="hidden md:block bg-white px-6 py-5 h-full w-full sm:relative sm:w-64 lg:w-1/5"
-        style={{ backgroundColor: "#2A2D3E", borderRadius: "20px" }}
+        style={{ backgroundColor: "#1A2632", borderRadius: "20px" }}
       >
-        <a
-          href="#"
+        <div
+          style={{ color: "#D0E6DA", fontSize: "30px" }}
           className="flex min-w-max-content items-center font-bold text-lg p-2 mb-12"
         >
           <svg
+            style={{ color: "#F2C61B" }}
             viewBox="0 0 20 20"
             fill="currentColor"
             className="h-6 w-6 mr-2 color"
@@ -30,18 +31,18 @@ export default function SidebarMain() {
             <path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z" />
           </svg>
           Alumni Connect
-        </a>
+        </div>
         <nav className="text-gray-600 text-lg font-semibold min-w-max-content space-y-2">
           <Link
             to="dashboard"
-            style={{ color: "#FF4B2E" }}
+            style={{ color: "#D8D5CE" }}
             className="flex items-center flex-shrink-0 px-5 py-3 rounded-full hover:bg-gray-100 hover:bg-opacity-50"
           >
             <svg
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              style={{ color: "#1991FF" }}
+              style={{ color: "#D0E6DA" }}
               className="h-6 w-6 mx-0.5 mr-3 text-gray-400 flex-shrink-0 "
             >
               <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
@@ -50,14 +51,14 @@ export default function SidebarMain() {
           </Link>
           <Link
             to="AlumniListMain"
-            style={{ color: "#FF4B2E" }}
+            style={{ color: "#D8D5CE" }}
             className="flex items-center flex-shrink-0 px-5 py-3 rounded-full hover:bg-gray-100 hover:bg-opacity-50"
           >
             <svg
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              style={{ color: "#1991FF" }}
+              style={{ color: "#D0E6DA" }}
               className="h-6 w-6 mx-0.5 mr-3 text-gray-400 flex-shrink-0"
             >
               <path
@@ -71,14 +72,14 @@ export default function SidebarMain() {
           </Link>
           <Link
             to="events"
-            style={{ color: "#FF4B2E" }}
+            style={{ color: "#D8D5CE" }}
             className="flex items-center flex-shrink-0 px-5 py-3 rounded-full hover:bg-gray-100 hover:bg-opacity-50"
           >
             <svg
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              style={{ color: "#1991FF" }}
+              style={{ color: "#D0E6DA" }}
               className="h-6 w-6 mx-0.5 mr-3 text-gray-400 flex-shrink-0"
             >
               <path
@@ -92,14 +93,14 @@ export default function SidebarMain() {
           </Link>
           <Link
             to="chat"
-            style={{ color: "#FF4B2E" }}
+            style={{ color: "#D8D5CE" }}
             className="flex items-center flex-shrink-0 px-5 py-3 rounded-full hover:bg-gray-100 hover:bg-opacity-50"
           >
             <svg
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              style={{ color: "#1991FF" }}
+              style={{ color: "#D0E6DA" }}
               className="h-6 w-6 mx-0.5 mr-3 text-gray-400 flex-shrink-0"
             >
               <path
@@ -113,14 +114,14 @@ export default function SidebarMain() {
           </Link>
           <Link
             to="videoCall"
-            style={{ color: "#FF4B2E" }}
+            style={{ color: "#D8D5CE" }}
             className="flex items-center flex-shrink-0 px-5 py-3 rounded-full hover:bg-gray-100 hover:bg-opacity-50"
           >
             <svg
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              style={{ color: "#1991FF" }}
+              style={{ color: "#D0E6DA" }}
               className="h-6 w-6 mx-0.5 mr-3 text-gray-400 flex-shrink-0"
             >
               <path
@@ -134,14 +135,14 @@ export default function SidebarMain() {
           </Link>
           <a
             href="#"
-            style={{ color: "#FF4B2E" }}
+            style={{ color: "#D8D5CE" }}
             className="flex items-center flex-shrink-0 px-5 py-3 rounded-full hover:bg-gray-100 hover:bg-opacity-50"
           >
             <svg
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              style={{ color: "#1991FF" }}
+              style={{ color: "#D0E6DA" }}
               className="h-6 w-6 mx-0.5 mr-3 text-gray-400 flex-shrink-0"
             >
               <path
@@ -155,14 +156,14 @@ export default function SidebarMain() {
           </a>
           <a
             href="#"
-            style={{ color: "#FF4B2E" }}
+            style={{ color: "#D8D5CE" }}
             className="flex items-center flex-shrink-0 px-5 py-3 rounded-full hover:bg-gray-100 hover:bg-opacity-50"
           >
             <svg
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              style={{ color: "#1991FF" }}
+              style={{ color: "#D0E6DA" }}
               className="h-6 w-6 mx-0.5 mr-3 text-gray-400 flex-shrink-0"
             >
               <path

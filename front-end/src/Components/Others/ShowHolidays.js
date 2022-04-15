@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import FullCalendar from "@fullcalendar/react"; // must go before plugins
 import dayGridPlugin from "@fullcalendar/daygrid";
+import "./Events.css";
 
 export default function Showholiday() {
   const [events, setEvents] = React.useState([]);
@@ -39,8 +40,15 @@ export default function Showholiday() {
             ".fc fc-media-screen fc-direction-ltr fc-theme-standard": {
               width: "650px",
               height: "500px",
+              // color: "yellow",
             },
+            // },
           }}
+          // .fc-daygrid-dot-event .fc-event-title {
+          //   background: #1a2632;
+          //   color: #d0e6da;
+          //   padding: 1px;
+          // }
           style={{ width: "750px", height: "500px" }}
           ref={calendarRef}
           events={events}

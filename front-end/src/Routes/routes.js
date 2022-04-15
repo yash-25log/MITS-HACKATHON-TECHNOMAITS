@@ -37,7 +37,7 @@ const routes = [
   },
   {
     path: "college",
-    element: <LayoutDirec />,
+    element: <LayoutClg />,
     children: [
       { path: "", element: <Dashboard name="MITS" /> },
       { path: "profile", element: <Profile /> },

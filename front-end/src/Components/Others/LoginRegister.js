@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./LoginRegister.css";
 import { useNavigate } from "react-router-dom";
 import { Navigate } from "react-router-dom";
 import ls from "localstorage-slim";
 import Alert from "@mui/material/Alert";
+import { MyContext } from "../../UserContext";
 
 export default function LoginRegister() {
   const navigate = useNavigate();
+  const [user, SetUserData] = useContext(MyContext);
 
   let msg;
   const [loginRes, setRes] = useState("");
@@ -122,6 +124,8 @@ export default function LoginRegister() {
           localStorage.setItem("token", d.token);
           if (d.role === "college") {
             setRes(true);
+            SetUserData(d);
+
             ls.set("role", d.role, { encrypt: true }); // with optional encryption
             localStorage.setItem("isAuthenticated", true);
             // localStorage.setItem("isAuthenticated",true)
@@ -129,6 +133,8 @@ export default function LoginRegister() {
             navigate("/college");
           } else {
             setRes(true);
+            SetUserData(d);
+
             // const isAuthenticated = true
             ls.set("role", d.role, { encrypt: true }); // with optional encryption
 
