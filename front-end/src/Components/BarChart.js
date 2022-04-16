@@ -23,54 +23,60 @@ import {
 
 const data = [
   {
-    name: "Page A",
-    uv: 4000,
-    pv: 2400,
-    amt: 2400,
+    name: "2016",
+    PrivateJob: 4000,
+    GovernmentJOb: 2400,
+    HigherEduation: 2400,
     startup: 1000,
   },
   {
-    name: "Page B",
-    uv: 3000,
-    pv: 1398,
-    amt: 2210,
-    startup: 200,
+    name: "2017",
+    PrivateJob: 3000,
+    GovernmentJOb: 2800,
+    HigherEduation: 2100,
+    startup: 2000,
   },
   {
-    name: "Page C",
-    uv: 2000,
-    pv: 9800,
-    amt: 2290,
+    name: "2018",
+    PrivateJob: 2000,
+    GovernmentJOb: 3400,
+    HigherEduation: 2900,
+    startup: 1500,
   },
   {
-    name: "Page D",
-    uv: 2780,
-    pv: 3908,
-    amt: 2000,
+    name: "2019",
+    PrivateJob: 400,
+    GovernmentJOb: 2990,
+    HigherEduation: 3400,
+    startup: 1050,
   },
   {
-    name: "Page E",
-    uv: 1890,
-    pv: 4800,
-    amt: 2181,
+    name: "2020",
+    PrivateJob: 4000,
+    GovernmentJOb: 2400,
+    HigherEduation: 2400,
+    startup: 1000,
   },
   {
-    name: "Page F",
-    uv: 2390,
-    pv: 3800,
-    amt: 2500,
+    name: "2021",
+    PrivateJob: 4000,
+    GovernmentJOb: 2400,
+    HigherEduation: 2400,
+    startup: 1000,
   },
   {
-    name: "Page G",
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
+    name: "2022",
+    PrivateJob: 4000,
+    GovernmentJOb: 2400,
+    HigherEduation: 2400,
+    startup: 1000,
   },
 ];
 
 export default function chartBar() {
   return (
     <BarChart
+      style={{ position: "absolute", marginTop: "200px", marginLeft: "600px" }}
       width={500}
       height={300}
       data={data}
@@ -86,9 +92,9 @@ export default function chartBar() {
       <YAxis />
       <Tooltip />
       <Legend />
-      <Bar dataKey="pv" fill="#8884d8" />
-      <Bar dataKey="uv" fill="#82ca9d" />
-      <Bar dataKey="amt" fill="#82ca9d" />
+      <Bar dataKey="PrivateJob" fill="#8884d8" />
+      <Bar dataKey="GovernmentJOb" fill="#82ca9d" />
+      <Bar dataKey="HigherEduation" fill="#82ca9d" />
       <Bar dataKey="startup" fill="#8884d8" />
     </BarChart>
   );
